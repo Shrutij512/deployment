@@ -4,11 +4,12 @@ require("dotenv").config();
 const app = express();
 
 const PORT = process.env.PORT;
+const NAME = process.env.NAME;
 
 app.use(express.json());
 
 app.get("/", (req, res) => {
-    res.send("Base API endpoint");
+    res.send(`Welcome , this api is built by ${NAME}`);
 });
 
 app.get("/blogs", (req, res) => {
